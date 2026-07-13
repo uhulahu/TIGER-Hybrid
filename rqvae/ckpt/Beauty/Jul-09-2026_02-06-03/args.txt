@@ -1,0 +1,38 @@
+batch_size: 1024
+beta: 0.25
+bn: False
+ckpt_dir: ./rqvae/ckpt/Beauty
+cl_temperature: 0.5
+cl_weights: [0, 0, 0]
+collab_debias: True
+collab_path: None
+collab_temperature: 0.5
+collab_weight: 0.0
+data_path: data/Beauty/item_emb.parquet
+device: cuda:0
+div_cluster_interval: 1
+div_n_clusters: 10
+div_temperature: 1
+div_weights: [0, 0, 0]
+dropout_prob: 0.0
+e_dim: 32
+epochs: 3000
+eval_step: 50
+kmeans_init: True
+kmeans_iters: 100
+layers: [512, 256, 128, 64]
+learner: AdamW
+loss_type: mse
+lr: 0.001
+lr_scheduler_type: linear
+num_emb_list: [256, 256, 256]
+num_workers: 4
+quant_weight: 1.0
+recon_weight: 1.0
+resume: None
+resume_optimizer: False
+save_limit: 5
+sk_epsilons: [0, 0, 0.003]
+sk_iters: 50
+warmup_epochs: 50
+weight_decay: 0.0001

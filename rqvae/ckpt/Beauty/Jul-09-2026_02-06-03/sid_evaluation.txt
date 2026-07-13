@@ -1,0 +1,51 @@
+─ 1. Codebook utilization ─
+  L1: 56/256 entries used (21.9%)
+  L2: 256/256 entries used (100.0%)
+  L3: 256/256 entries used (100.0%)
+
+─ 2. Prefix Purity ─
+  L   Groups   Purity     Cat.NMI    Cat.ARI    BrandPurity 
+  --- -------- ---------- ---------- ---------- ------------
+  L1   56       0.7891     0.3185     0.0837     0.1315      
+  L2   5673     0.8830     0.2706     0.0014     0.6916      
+  L3   12059    0.9998     0.2867     0.0000     0.9992      
+
+─ L1 assignment by coarse category (top-10 L1 codes) ─
+  Code 139 ( 647 items): majority=Makeup (93%), dist={Makeup:601, Skin Care:18, Tools & Accessories:13, Hair Care:10, Bath & Body:4}
+  Code  37 ( 563 items): majority=Makeup (64%), dist={Makeup:362, Tools & Accessories:132, Skin Care:29, Hair Care:23, Bath & Body:13}
+  Code  83 ( 530 items): majority=Tools & Accessories (67%), dist={Tools & Accessories:357, Makeup:129, Skin Care:26, Hair Care:14, Fragrance:2}
+  Code  89 ( 461 items): majority=Hair Care (85%), dist={Hair Care:394, Skin Care:35, Bath & Body:19, Makeup:11, Fragrance:1}
+  Code  60 ( 413 items): majority=Fragrance (74%), dist={Fragrance:306, Skin Care:82, Makeup:11, Hair Care:8, Bath & Body:4}
+  Code 195 ( 397 items): majority=Hair Care (88%), dist={Hair Care:349, Bath & Body:15, Makeup:12, Skin Care:11, Tools & Accessories:10}
+  Code 226 ( 371 items): majority=Bath & Body (58%), dist={Bath & Body:215, Skin Care:111, Hair Care:29, Makeup:7, Tools & Accessories:6}
+  Code 151 ( 328 items): majority=Makeup (83%), dist={Makeup:272, Skin Care:27, Hair Care:15, Tools & Accessories:7, Bath & Body:4}
+  Code 146 ( 325 items): majority=Hair Care (86%), dist={Hair Care:278, Skin Care:33, Bath & Body:8, Makeup:4, Tools & Accessories:2}
+  Code 187 ( 319 items): majority=Tools & Accessories (33%), dist={Tools & Accessories:106, Skin Care:103, Makeup:79, Hair Care:20, Bath & Body:8}
+
+  Total items with category: 12101 / 12101
+
+─ 3. Prefix bucket-size distribution ─
+  L   Groups   Min    p25    Median   Mean     p75    p95    Max    Std     
+  --- -------- ------ ------ -------- -------- ------ ------ ------ --------
+  L1   56       33     122    194      216.1    262    478    647    129.7   
+  L2   5673     1      1      1        2.1      2      6      56     2.4     
+  L3   12059    1      1      1        1.0      1      1      3      0.1     
+
+─ 4. Conditional code usage (branching factor) ─
+  L1→L2: per L1 code, 56 L1 codes used → mean branching: 101.3, median: 110, min=23, max=162, fraction of 256: 0.396
+  L1L2→L3: per prefix, 5673 L1L2 pairs → mean branching: 2.1, median: 1, min=1, max=53, fraction of 256: 0.008
+
+─ 5. Entropy (bits) ─
+  H(L1)        = 5.5648  (max 8.0000, 69.6% used)
+  H(L2)        = 7.9270  (max 8.0000, 99.1% used)
+  H(L3)        = 7.8526  (max 8.0000, 98.2% used)
+  H(L1..L2)     = 11.9879
+  H(L1..L3)     = 13.5556
+  H(L2|L1)      = 6.4231
+  H(L3|L1,L2)   = 1.5678
+
+  Information breakdown (% of total):
+  L1: 5.56 bits (72.4% of token-level entropy)
+  L2: 7.93 bits (103.1% of token-level entropy)
+  L3: 7.85 bits (102.2% of token-level entropy)
+  Joint entropy of full SID: 13.5556

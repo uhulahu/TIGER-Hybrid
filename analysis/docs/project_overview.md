@@ -6,7 +6,7 @@
 
 ## 1. 背景与目标
 
-TIGER（Transformer Index for GEnerative Retrieval）使用 RQ-VAE 将 item 内容嵌入量化为 4-token 语义 ID（SID），再由 T5 decoder 自回归生成。相比传统双塔召回，生成式检索通过自回归生成 SID 直接产生候选，无需在查询阶段对全量 item 逐一打分，推理复杂度对 catalog size 的直接依赖较弱。
+TIGER（Transformer Index for GEnerative Retrieval）使用 RQ-VAE 将 item 内容嵌入量化为 4-token 语义 ID（SID），再由 T5 encoder-decoder 自回归生成。相比传统双塔召回，生成式检索通过自回归生成 SID 直接产生候选，无需在查询阶段对全量 item 逐一打分，推理复杂度对 catalog size 的直接依赖较弱。
 
 本项目以 **Amazon Beauty**（12,101 items, 22,363 users）为基准，系统探索以下问题：
 
